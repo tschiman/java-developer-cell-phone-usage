@@ -39,7 +39,9 @@ For each company cell phone provide the following information
     *	one column for each month
 *	Data Usage
     *	one column for each month
-  
+
+### Report  
+
 Report should be printed to a local printer in your computer.
 
 # Tech Stack
