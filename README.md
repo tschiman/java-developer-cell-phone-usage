@@ -1,7 +1,4 @@
-# java-developer
-Technical evaluation for Java developer candidates
-
-# Feature Request App
+# Cell Phone Useage Report
 Write a report for cell phone usages in the company for the current year, and print the report to your local printer.
 
 Data Model – database tables are in comma separated files with the header in the first row. 
