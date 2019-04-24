@@ -1,4 +1,4 @@
-# Cell Phone Useage Report
+# Cell Phone Usage Report
 Write a report for cell phone usages in the company for the current year, and print the report to your local printer.
 
 Data Model – database tables are in comma separated files with the header in the first row. 
