@@ -1,15 +1,16 @@
 # Cell Phone Usage Report
 Write a report for cell phone usages in the company for the current year, and print the report to your local printer.
 
-Data Model – database tables are in comma separated files with the header in the first row. 
+### Data Model
+Database tables are in comma separated files with the header in the first row. 
 
-CellPhone.csv
+**CellPhone.csv**
 *	employeeId
 *	employeeName
 *	purchaseDate
 *	model
 
-CellPhoneUsageByMonth.csv (beware that there may be more than one record for an employee on a single date, so it is not a perfect data in a perfect world)
+**CellPhoneUsageByMonth.csv** (beware that there may be more than one record for an employee on a single date, so it is not a perfect data in a perfect world)
 *	employeeId
 *	year
 *	month
@@ -33,9 +34,9 @@ For each company cell phone provide the following information
 *	Model
 *	Purchase Date
 *	Minutes Usage
-  *	one column for each month
+    *	one column for each month
 *	Data Usage
-  *	one column for each month
+    *	one column for each month
   
 Report should be printed to a local printer in your computer
 
