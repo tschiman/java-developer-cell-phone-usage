@@ -17,6 +17,8 @@ Database tables are in comma separated files with the header in the first row.
 *	minutesUsed
 *	dataUsed
 
+### Report  
+
 The report should contain the following information
 
 **Header Section**
@@ -39,8 +41,6 @@ For each company cell phone provide the following information
     *	one column for each month
 *	Data Usage
     *	one column for each month
-
-### Report  
 
 Report should be printed to a local printer in your computer.
 
