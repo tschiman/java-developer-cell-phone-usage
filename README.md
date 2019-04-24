@@ -19,7 +19,7 @@ Database tables are in comma separated files with the header in the first row.
 
 The report should contain the following information
 
-Header Section
+**Header Section**
 
 *	Report Run Date
 *	Number of Phones
@@ -27,7 +27,9 @@ Header Section
 *	Total Data
 *	Average Minutes
 *	Average Data
-Details Section
+
+**Details Section**
+
 For each company cell phone provide the following information
 *	Employee Id
 *	Employee Name
@@ -38,7 +40,7 @@ For each company cell phone provide the following information
 *	Data Usage
     *	one column for each month
   
-Report should be printed to a local printer in your computer
+Report should be printed to a local printer in your computer.
 
 # Tech Stack
 Java is the programming language we want you use. Any version of Java will be fine. You can use open source libraries if you like.
