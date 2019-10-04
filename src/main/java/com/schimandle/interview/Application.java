@@ -8,5 +8,7 @@ public class Application {
 
         DataLoader dataLoader = new DataLoader();
         List<CellPhone> cellPhones = dataLoader.loadCellPhoneData();
+        List<PhoneUsage> phoneUsages = dataLoader.loadCellPhoneUsage();
+
     }
 }
