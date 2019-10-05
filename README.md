@@ -1,3 +1,17 @@
+# instructions
+
+I completed this task using apache commons io to load the files as the only library.
+All data manipulation and evaluation was done using java 8 types and streams libraries.
+
+Output is printed to the console.
+
+To run the program simply run the main method of the Application.class
+
+Tests are provided in the test folder
+
+Next steps on this might be to add formatting to the data and an output type (pdf, csv, etc) which would drive
+the addition of other libraries like PDFBox of a CSVWriter/Reader.
+
 # Cell Phone Usage Report
 Write a report for cell phone usages in the company for the current year, and print the report to your local printer.
 
