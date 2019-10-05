@@ -3,7 +3,11 @@ package com.schimandle.interview;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.YearMonth;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) throws IOException {
@@ -31,7 +35,15 @@ public class Application {
         //print an employees record
 
         cellPhones.forEach(p -> {
-            System.out.println(String.format("- + empId: %s empName: %s model: %s purchaseDate: %s", p.employeeId, p.employeeName, p.model, p.purchaseDate));
+            List<PhoneUsage> empPhoneUsage = phoneUsages.stream().filter(u -> u.employeeId == p.employeeId).collect(Collectors.toList());
+            Map<YearMonth, List<PhoneUsage>> monthlyUsage = empPhoneUsage.stream()
+                .sorted(Comparator.comparing(u -> u.date))
+                .collect(Collectors.groupingBy(u -> YearMonth.from(u.date)));
+            StringBuilder stringBuilder = new StringBuilder();
+            monthlyUsage.entrySet().forEach(e -> {
+                stringBuilder.append(String.format(" %s (mins: %s data: %s)", e.getKey(), e.getValue().stream().mapToInt(u -> u.minutes).sum(), e.getValue().stream().map(u -> u.data).reduce(BigDecimal.ZERO, BigDecimal::add)));
+            });
+            System.out.println(String.format("- + empId: %s empName: %s model: %s purchaseDate: %s **monthly usage**%s", p.employeeId, p.employeeName, p.model, p.purchaseDate, stringBuilder.toString()));
         });
     }
 }
