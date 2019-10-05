@@ -13,7 +13,7 @@ import java.util.List;
 
 public class DataLoader {
 
-     List<CellPhone> loadCellPhoneData() throws IOException {
+      List<CellPhone> loadCellPhoneData() throws IOException {
         //get the phone data
         File file = new File(this.getClass().getClassLoader().getResource("CellPhone.csv").getFile());
         List<String> lines = FileUtils.readLines(file, Charset.defaultCharset());
