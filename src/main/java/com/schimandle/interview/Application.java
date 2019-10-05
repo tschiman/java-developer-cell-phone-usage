@@ -10,5 +10,13 @@ public class Application {
         List<CellPhone> cellPhones = dataLoader.loadCellPhoneData();
         List<PhoneUsage> phoneUsages = dataLoader.loadCellPhoneUsage();
 
+        //validate data
+        DataValidator.validate(cellPhones, phoneUsages);
+
+        //build header data:
+        // run date, #phones, total mins, total data, avg min, avg data
+
+
+
     }
 }
