@@ -15,9 +15,9 @@ public class Application {
 
         //build header data:
         // run date, #phones, total mins, total data, avg min, avg data
-        ReportGenerator.buildHeader(cellPhones, phoneUsages);
+        System.out.println(ReportGenerator.buildHeader(cellPhones, phoneUsages));
 
         //print an employees record
-        cellPhones.forEach(p -> ReportGenerator.buildRecord(p, phoneUsages));
+        cellPhones.forEach(p -> System.out.println(ReportGenerator.buildRecord(p, phoneUsages)));
     }
 }

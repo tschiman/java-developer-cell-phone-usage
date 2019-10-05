@@ -13,7 +13,7 @@ public class ReportGenerator {
     private static String header;
     private static List<String> records = new ArrayList<>();
 
-    public static void buildHeader(List<CellPhone> cellPhones, List<PhoneUsage> phoneUsages) {
+    public static String buildHeader(List<CellPhone> cellPhones, List<PhoneUsage> phoneUsages) {
         LocalDate runDate = LocalDate.now();
         int phoneCount = cellPhones.size();
 
@@ -24,10 +24,10 @@ public class ReportGenerator {
         BigDecimal averageData = totalData.divide(new BigDecimal(phoneUsages.size()));
 
         header = String.format("- runDate %s phoneCount: %s totalMins: %s totalData: %s avgMins: %s avgData: %s", runDate, phoneCount, totalMinutes, totalData, averageMinutes, averageData);
-        System.out.println(header);
+        return header;
     }
 
-    public static void buildRecord(CellPhone p, List<PhoneUsage> phoneUsages) {
+    public static String buildRecord(CellPhone p, List<PhoneUsage> phoneUsages) {
         List<PhoneUsage> empPhoneUsage = phoneUsages.stream().filter(u -> u.employeeId == p.employeeId).collect(Collectors.toList());
         Map<YearMonth, List<PhoneUsage>> monthlyUsage = empPhoneUsage.stream()
             .sorted(Comparator.comparing(u -> u.date))
@@ -38,6 +38,6 @@ public class ReportGenerator {
         });
         String record = String.format("- + empId: %s empName: %s model: %s purchaseDate: %s **monthly usage**%s", p.employeeId, p.employeeName, p.model, p.purchaseDate, stringBuilder.toString());
         records.add(record);
-        System.out.println(record);
+        return record;
     }
 }
