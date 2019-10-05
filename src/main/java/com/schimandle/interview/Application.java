@@ -26,8 +26,12 @@ public class Application {
         BigDecimal averageMinutes = new BigDecimal(totalMinutes).divide(new BigDecimal(phoneUsages.size()));
         BigDecimal averageData = totalData.divide(new BigDecimal(phoneUsages.size()));
 
-        System.out.println(String.format(" - Date %s #Phone: %s totalMins: %s totalData: %s avgMins: %s avgData: %s", runDate, phoneCount, totalMinutes, totalData, averageMinutes, averageData));
+        System.out.println(String.format("- runDate %s phoneCount: %s totalMins: %s totalData: %s avgMins: %s avgData: %s", runDate, phoneCount, totalMinutes, totalData, averageMinutes, averageData));
 
+        //print an employees record
 
+        cellPhones.forEach(p -> {
+            System.out.println(String.format("- + empId: %s empName: %s model: %s purchaseDate: %s", p.employeeId, p.employeeName, p.model, p.purchaseDate));
+        });
     }
 }
